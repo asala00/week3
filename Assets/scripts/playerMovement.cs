@@ -8,7 +8,7 @@ public class playerMovement : MonoBehaviour
      public CharacterController _controller;
      [SerializeField] public float _speed;
      public Transform cam;
-   
+    
     
     void Update()
     {
