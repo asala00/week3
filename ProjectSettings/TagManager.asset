@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - idel headphones
+  - active headphones
   layers:
   - Default
   - TransparentFX
