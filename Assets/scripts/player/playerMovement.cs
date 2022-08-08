@@ -14,6 +14,7 @@ public class playerMovement : MonoBehaviour
      private float jumpHeight = 2.0f;
      private float gravityValue = -9.81f;
 
+     [SerializeField] public soundManager soundManager; //to use the sounds in the sound manager script+plug it in in the inspector
     
      private void Start()
      {
@@ -42,6 +43,7 @@ public class playerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && groundedPlayer)
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+            soundManager.JumpSFX();
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
