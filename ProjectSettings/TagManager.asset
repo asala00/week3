@@ -11,6 +11,7 @@ TagManager:
   - couchfront
   - CollectCoinMini
   - CollectDamageMini
+  - gameOver
   layers:
   - Default
   - TransparentFX

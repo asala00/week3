@@ -9,7 +9,7 @@ public class minigamePlay : MonoBehaviour
     [SerializeField] GameObject miniGameCam;
     [SerializeField] private GameObject minigamecanvas;
     [SerializeField] private GameObject minigameON; //
-    
+    [SerializeField] private GameObject gameOVERview;
 
     
     public void playMiniGame()
@@ -24,6 +24,7 @@ public class minigamePlay : MonoBehaviour
     void StartGame()
     {
         minigamecanvas.SetActive(true);
+        gameOVERview.SetActive(false);
         minigameON.SetActive(true);
     }
 }

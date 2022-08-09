@@ -24,16 +24,11 @@ public class interactions : MonoBehaviour
     [SerializeField] private GameObject playerTBD;
     [SerializeField] private GameObject BudgetHUD;
     [SerializeField] private GameObject miniGameHUD;
-
-        
-    
     void Start()
     {
         headphonesON.SetActive(false);
         Pscore.text = ("0");
     }
-
-    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.H))
