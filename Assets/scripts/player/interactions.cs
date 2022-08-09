@@ -93,18 +93,13 @@ public class interactions : MonoBehaviour
             sm.CollectSFX();
             sm.WinSFX();
         }
-
-        
-        
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
         if (other.CompareTag("couchfront"))
         {
             sitPrompt.SetActive(true);
         }
+
     }
+
 
     private void OnControllerColliderHit (ControllerColliderHit col) //using this instead of oncolliderenter becz th game attached to this script has a char controller and wont be affected by it
     {

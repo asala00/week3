@@ -70,12 +70,12 @@ PrefabInstance:
     - target: {fileID: 8527481656891664661, guid: 33c7ffbf95b854cd79d600be322313bf,
         type: 3}
       propertyPath: m_Name
-      value: collectcoin (3)
+      value: collectcoin (3) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8527481656891664661, guid: 33c7ffbf95b854cd79d600be322313bf,
         type: 3}
       propertyPath: m_TagString
-      value: collectDamage
+      value: CollectDamageMini
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33c7ffbf95b854cd79d600be322313bf, type: 3}

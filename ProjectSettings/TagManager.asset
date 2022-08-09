@@ -9,6 +9,8 @@ TagManager:
   - collect
   - collectDamage
   - couchfront
+  - CollectCoinMini
+  - CollectDamageMini
   layers:
   - Default
   - TransparentFX
