@@ -14,7 +14,17 @@ public class interactions : MonoBehaviour
     [SerializeField] private soundManager sm;
     [SerializeField] private TextMeshProUGUI Pscore;     //Text variables grant us access to those objects' Text components
     public int HP = 5;
-    [SerializeField] private TextMeshProUGUI playerHP; 
+    [SerializeField] private TextMeshProUGUI playerHP;
+    [SerializeField] private GameObject sitPrompt;
+    [SerializeField] private Transform couch;
+    [SerializeField] private Transform player;
+    [SerializeField] private Transform TVtarget;
+    [SerializeField] GameObject TvPovCam;
+    private playerMovement playerScript;
+    [SerializeField] private GameObject playerTBD;
+    [SerializeField] private GameObject BudgetHUD;
+    [SerializeField] private GameObject miniGameHUD;
+
         
     
     void Start()
@@ -39,6 +49,28 @@ public class interactions : MonoBehaviour
         {
             Die();
         }
+
+        if (sitPrompt.activeSelf)
+        {
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+               miniGamePOV();
+            }
+        }
+    }
+
+    void miniGamePOV()
+    {
+        player.position = couch.position;
+        sitPrompt.SetActive(false);
+        player.transform.LookAt(TVtarget);
+                
+        playerScript = playerTBD.GetComponent<playerMovement>();
+        playerScript.enabled = false;
+        BudgetHUD.SetActive(false);
+        TvPovCam.SetActive(true);
+        miniGameHUD.SetActive(true);
+        
     }
     private void Die()
     {
@@ -61,8 +93,19 @@ public class interactions : MonoBehaviour
             sm.CollectSFX();
             sm.WinSFX();
         }
+
+        
+        
     }
-    
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("couchfront"))
+        {
+            sitPrompt.SetActive(true);
+        }
+    }
+
     private void OnControllerColliderHit (ControllerColliderHit col) //using this instead of oncolliderenter becz th game attached to this script has a char controller and wont be affected by it
     {
         if (col.gameObject.CompareTag("collectDamage"))
