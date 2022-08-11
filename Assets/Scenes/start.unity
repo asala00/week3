@@ -5476,13 +5476,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341580173}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d713f59f5729c492a91e829db5aff863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TimerClock: {fileID: 272444876}
-  timeLeft: 59
+  timeLeft: 80
 --- !u!4 &341580175
 Transform:
   m_ObjectHideFlags: 0
@@ -32965,7 +32965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _controller: {fileID: 1750217006}
-  _speed: 5
+  _speed: 8
   cam: {fileID: 255788804}
   soundManager: {fileID: 945687642}
 --- !u!143 &1750217006
@@ -35633,7 +35633,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1783738198}
-  m_LocalRotation: {x: 0.054621454, y: 0.9145099, z: -0.13196848, w: 0.3785136}
+  m_LocalRotation: {x: 0.054621458, y: 0.9145099, z: -0.13196847, w: 0.3785136}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
