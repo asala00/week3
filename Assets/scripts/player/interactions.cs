@@ -24,6 +24,8 @@ public class interactions : MonoBehaviour
     [SerializeField] private GameObject playerTBD;
     [SerializeField] private GameObject BudgetHUD;
     [SerializeField] private GameObject miniGameHUD;
+    [SerializeField] private GameObject flashlight;
+    [SerializeField] private GameObject nightstand;
     void Start()
     {
         headphonesON.SetActive(false);
@@ -36,6 +38,30 @@ public class interactions : MonoBehaviour
             headphonesON.SetActive(true);
             headphonesCOUNTER.SetActive(false);
         }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (flashlight.activeInHierarchy)
+            {
+                flashlight.SetActive(false);
+            }
+            else
+            {
+                flashlight.SetActive(true);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            if (nightstand.activeInHierarchy)
+            {
+                nightstand.SetActive(false);
+            }
+            else
+            {
+                nightstand.SetActive(true);
+            }
+        }
+
 
         Pscore.text = (""+ polaroidCount); //to update the score 
         playerHP.text = ("" + HP);
